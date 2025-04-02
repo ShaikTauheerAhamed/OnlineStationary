@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="1.0" xmlns:edmx="http://schemas.microsoft.com/ado/2007/06/edmx" xmlns:m="http://schemas.microsoft.com/ado/2007/08/dataservices/metadata" xmlns:sap="http://www.sap.com/Protocols/SAPData">
+    <edmx:DataServices m:DataServiceVersion="2.0">
+        <Schema Namespace="ZTBOOK_ODATA_SRV" xml:lang="en" sap:schema-version="1" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+            <EntityType Name="ztbooks" sap:content-version="1">
+                <Key>
+                    <PropertyRef Name="Bookid"/>
+                </Key>
+                <Property Name="Bookid" Type="Edm.String" Nullable="false" MaxLength="32" sap:unicode="false" sap:label="BOOK ID" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Author" Type="Edm.String" Nullable="false" MaxLength="32" sap:unicode="false" sap:label="AUTHOR ID" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Gonre" Type="Edm.String" Nullable="false" MaxLength="32" sap:unicode="false" sap:label="GENRE ID" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Bookname" Type="Edm.String" Nullable="false" MaxLength="128" sap:unicode="false" sap:label="BOOK NAME" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Price" Type="Edm.Decimal" Nullable="false" Precision="7" Scale="3" sap:unicode="false" sap:unit="Currency" sap:label="price" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Stock" Type="Edm.Decimal" Nullable="false" Precision="3" Scale="0" sap:unicode="false" sap:unit="Quan" sap:label="stock" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Currency" Type="Edm.String" Nullable="false" MaxLength="5" sap:unicode="false" sap:label="currency reference" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false" sap:semantics="currency-code"/>
+                <Property Name="Quan" Type="Edm.String" Nullable="false" MaxLength="3" sap:unicode="false" sap:label="units" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false" sap:semantics="unit-of-measure"/>
+            </EntityType>
+            <EntityContainer Name="ZTBOOK_ODATA_SRV_Entities" m:IsDefaultEntityContainer="true" sap:supported-formats="atom json xlsx">
+                <EntitySet Name="ztbooksSet" EntityType="ZTBOOK_ODATA_SRV.ztbooks" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:pageable="false" sap:content-version="1"/>
+            </EntityContainer>
+            <Annotation Term="Core.SchemaVersion" String="1.0.0" xmlns="http://docs.oasis-open.org/odata/ns/edm"/>
+            <atom:link rel="self" href="http://s4hanadev.eastus2.cloudapp.azure.com:50000/sap/opu/odata/sap/ZTBOOK_ODATA_SRV/$metadata" xmlns:atom="http://www.w3.org/2005/Atom"/>
+            <atom:link rel="latest-version" href="http://s4hanadev.eastus2.cloudapp.azure.com:50000/sap/opu/odata/sap/ZTBOOK_ODATA_SRV/$metadata" xmlns:atom="http://www.w3.org/2005/Atom"/>
+        </Schema>
+    </edmx:DataServices>
+</edmx:Edmx>
